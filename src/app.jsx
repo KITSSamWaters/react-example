@@ -8,6 +8,7 @@ class AppComponent extends React.Component {
       <HeaderComponent message='Hello 2' shouldShowSecondHeader={true} title='Dr' colour='green' />
       <p>Hello, World, 2</p>
       <ButtonComponent />
+      <ButtonComponent isSuperButton={true}/>
     </div>
   }
 }

@@ -17,6 +17,27 @@ const config = {
               // Only look in this folder
               include: APP_DIR,
               // Files need to match this pattern to be compiled
+              test: /\.css$/,
+              // Apply these rules to it if it matches
+              use: [
+                {loader: "style-loader"},
+                {
+                  loader: 'css-loader',
+                  options: {
+                    importLoaders: 1,
+                    localIdentName: "[name]__[local]___[hash:base64:5]",
+                    modules: true,
+                    sourceMap: true
+                  }
+                }
+              ]
+            },
+            {
+              // Don't look in this folder
+              exclude: /node_modules/,
+              // Only look in this folder
+              include: APP_DIR,
+              // Files need to match this pattern to be compiled
               test: /\.jsx?$/,
               // Apply these rules to it if it matches
               use: [
@@ -32,7 +53,7 @@ const config = {
         path: BUILD_DIR
     },
     resolve: {
-      extensions: ['.js', '.jsx']
+      extensions: ['.css', '.js', '.jsx']
     }
 }
 
