@@ -1,0 +1,21 @@
+{
+  "name": "test1",
+  "version": "0.0.1",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
+  },
+  "devDependencies": {
+    "@babel/core":"^7.0.0-rc.1",
+    "@babel/preset-react": "^7.0.0-rc.1",
+    "babel-loader": "^8.0.0-beta.4",
+    "express": "^4.16.3",
+    "webpack": "^4.16.5",
+    "webpack-cli":"^3.1.0"
+  },
+  "scripts": {
+    "build": "webpack --config webpack.config.js -d",
+    "start": "node server/server"
+  }
+}
